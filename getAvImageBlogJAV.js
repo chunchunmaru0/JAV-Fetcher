@@ -73,11 +73,12 @@ async function getAvImageBlogJAV(avid) {
       ? (dmmcid = thumbnail.split("/adult/").pop().split("/").shift())
       : (dmmcid = thumbnail.split("/video/").pop().split("/").shift());
   }
-  console.log({ img_src, thumbnail, smol_thumbnail, dmmcid });
-  const regex = /^[a-zA-Z]+00\d{1,5}$/;
+  return { dmmcid, thumbnail, smol_thumbnail, img_src };
 
-  const isValid = regex.test(dmmcid);
-  console.log(isValid);
+  // const regex = /^[a-zA-Z]+00\d{1,5}$/;
+
+  // const isValid = regex.test(dmmcid);
+  // console.log(isValid);
 }
 //
 // getAvImageBlogJAV("PPPD-999");
